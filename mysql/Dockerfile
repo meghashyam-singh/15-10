@@ -1,0 +1,5 @@
+FROM mysql:8.0
+COPY app-user.sql /docker-entrypoint-initb.d/
+COPY master-data.sql /docker-entrypoint-initdb.d/
+ENV MYSQL_ROOT_PASSWORD="RoboShop@1"
+EXPOSE 3306

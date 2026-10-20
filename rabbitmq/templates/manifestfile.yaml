@@ -32,7 +32,7 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      projetc: roboshop
+      project: roboshop
       tier: db
       component: rabbitmq
   template:

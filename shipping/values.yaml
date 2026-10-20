@@ -2,4 +2,4 @@ deployment:
   image: meghashyam792/roboshop
   imagetag: shipping
 service:
-  type: ClsuterIP
+  type: ClusterIP

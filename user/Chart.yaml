@@ -1,0 +1,6 @@
+---
+apiVersion: v2
+name: "user helm deployment"
+version: 6.0.0
+appVersion: 6.6.6
+description: "user helm deploy"

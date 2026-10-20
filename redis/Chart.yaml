@@ -1,0 +1,6 @@
+---
+apiVersion: v2
+name: redis-helm-chart
+version: 2.0.0
+appVersion: 2.2.2
+description: "deploying redis using helm"

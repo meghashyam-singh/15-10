@@ -1,0 +1,5 @@
+deployment:
+  image: meghashyam792/roboshop
+  imagetag: catalogue
+service:
+  type: ClusterIP

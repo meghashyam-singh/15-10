@@ -48,7 +48,7 @@ spec:
           image: "{{ .Values.statefulset.image }}:{{ .Values.statefulset.imagetag }}"
           imagePullPolicy: Always
           ports:
-            - port: 5672
+            - containerPort: 5672
               name: rabbitmq-port
           envFrom:
             - configMapRef:

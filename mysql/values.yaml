@@ -1,0 +1,6 @@
+statefulset:
+  image: meghashyam792/roboshop
+  imagetag: mysql
+service:
+  type: ClusterIp
+  

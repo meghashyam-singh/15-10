@@ -1,0 +1,6 @@
+---
+apiVersion: v2
+name: mysql-helm-chart
+version: 3.0.0
+appVersion: 3.3.3
+description: "mysql hempl deployment"

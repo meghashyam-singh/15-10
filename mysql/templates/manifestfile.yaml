@@ -20,7 +20,7 @@ data:
 
 ---
 apiVersion: apps/v1
-kind: StatefuSet
+kind: StatefulSet
 metadata:
   name: mysql
   namespace: roboshop

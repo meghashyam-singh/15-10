@@ -128,10 +128,10 @@ spec:
             - name: frontend-volume
               mountPath: /etc/nginx/nginx.conf
               subPath: nginx.conf
-    volumes:
-      - name: frontend-volume
-        configMap:
-          name: frontend-config
+      volumes:
+        - name: frontend-volume
+          configMap:
+            name: frontend-config
 
 ---
 apiVersion: v1

@@ -46,7 +46,7 @@ spec:
               memory: "128Mi"
             limits:
               cpu: "500m"
-              limits: "256Mi"
+              memory: "256Mi"
           readinessProbe:
             tcpSocket:
               port: redis-port
@@ -117,7 +117,7 @@ kind: ServiceAccount
 metadata:
   name: redis-service-account
   namespace: roboshop
-  lables:
+  labels:
     project: roboshop
     tier: db
     component: redis

@@ -36,7 +36,7 @@ spec:
       project: roboshop
       tier: db
       component: mysql
-  templates:
+  template:
     metadata:
       labels:
         project: roboshop
@@ -118,7 +118,7 @@ metadata:
   name: mysql-headless-service
   namespace: roboshop
 spec:
-  clusterIp: None
+  clusterIP: None
   selector:
     project: roboshop
     tier: db

@@ -88,7 +88,7 @@ spec:
             storage: "5Gi"
 
 ---
-apiversion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: rabbitmq-service
@@ -110,7 +110,7 @@ spec:
       name: rabbitmq-management-port
 
 ---
-apiversion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: rabbitmq-headless-service

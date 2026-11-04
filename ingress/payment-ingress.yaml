@@ -12,8 +12,7 @@ metadata:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:257394454651:certificate/22603df5-3a21-486e-a4b5-5073087cb801
-    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:257394454651:certificate/00cbebe4-4278-40b2-b0d4-b83d536b3495
     alb.ingress.kubernetes.io/tags: project=roboshop, environmet=prod
     alb.ingress.kubernetes.io/ssl-redirect: '443'
     alb.ingress.kubernetes.io/healthcheck-path: /health

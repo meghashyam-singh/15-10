@@ -2,4 +2,4 @@ deployment:
   image: meghashyam792/roboshop
   imagetag: frontend
 service:
-  type: LoadBalancer
+  type: ClusterIP

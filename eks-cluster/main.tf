@@ -28,8 +28,10 @@ module "eks" {
   vpc_id                   = "vpc-095356199f2289643"
   subnet_ids               = ["subnet-01134070a41b7710a", "subnet-0e8ee2ccce9d275bd"]
   control_plane_subnet_ids = ["subnet-01134070a41b7710a", "subnet-0e8ee2ccce9d275bd"]
-  create_node_security_group = true
-  create_security_group      = true
+  create_node_security_group = false
+  create_security_group      = false
+  node_security_group_id = "sg-081a8846ba13dd4e8"
+  security_group_id = "sg-081a8846ba13dd4e8"
   
 
   # EKS Managed Node Group(s)

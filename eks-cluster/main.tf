@@ -63,6 +63,35 @@ module "eks" {
         nodegroup = "blue"
       }
     }
+
+    green = {
+      create = var.enable_green
+      ami_type       = "AL2023_x86_64_STANDARD"
+      kubernetes_version = var.eks_nodegroup_green_version
+      instance_types = ["m5.xlarge"]
+      iam_role_additional_policies  = {
+        amazonEFS = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
+        amazonEBS = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
+      }
+      
+      # cluster nodes autoscaling
+      min_size     = 2
+      max_size     = 10
+      desired_size = 2
+
+      taints = {
+        upgrade = {
+          key = "upgrade"
+          value = "true"
+          effect = "NO_SCHEDULE"
+        }
+      }
+
+      labels = {
+        nodegroup = "green"
+      }
+    }
+
   }
 
   tags = {

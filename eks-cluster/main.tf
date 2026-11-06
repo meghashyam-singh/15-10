@@ -6,6 +6,7 @@ module "eks" {
   # kubernetes_version = "1.33"
   kubernetes_version = var.eks_version
 
+
   addons = {
     coredns                = {}
     eks-pod-identity-agent = {
@@ -40,7 +41,7 @@ module "eks" {
       create = var.enable_blue
       ami_type       = "AL2023_x86_64_STANDARD"
       kubernetes_version = var.eks_nodegroup_blue_version
-      instance_types = ["t3.medium"]
+      instance_types = ["t3.small"]
       iam_role_additional_policies  = {
         amazonEFS = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
         amazonEBS = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
@@ -64,33 +65,33 @@ module "eks" {
       }
     }
 
-    green = {
-      create = var.enable_green
-      ami_type       = "AL2023_x86_64_STANDARD"
-      kubernetes_version = var.eks_nodegroup_green_version
-      instance_types = ["t3.medium"]
-      iam_role_additional_policies  = {
-        amazonEFS = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
-        amazonEBS = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
-      }
+    # green = {
+    #   create = var.enable_green
+    #   ami_type       = "AL2023_x86_64_STANDARD"
+    #   kubernetes_version = var.eks_nodegroup_green_version
+    #   instance_types = ["t3.medium"]
+    #   iam_role_additional_policies  = {
+    #     amazonEFS = "arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
+    #     amazonEBS = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
+    #   }
       
-      # cluster nodes autoscaling
-      min_size     = 2
-      max_size     = 10
-      desired_size = 2
+    #   # cluster nodes autoscaling
+    #   min_size     = 2
+    #   max_size     = 10
+    #   desired_size = 2
 
-      taints = {
-        upgrade = {
-          key = "upgrade"
-          value = "true"
-          effect = "NO_SCHEDULE"
-        }
-      }
+    #   taints = {
+    #     upgrade = {
+    #       key = "upgrade"
+    #       value = "true"
+    #       effect = "NO_SCHEDULE"
+    #     }
+    #   }
 
-      labels = {
-        nodegroup = "green"
-      }
-    }
+    #   labels = {
+    #     nodegroup = "green"
+    #   }
+    # }
 
   }
 
@@ -99,3 +100,4 @@ module "eks" {
   }
   
 }
+

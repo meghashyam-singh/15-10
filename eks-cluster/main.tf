@@ -18,8 +18,6 @@ module "eks" {
     }
     metrics-server = {}
 
-    aws-ebs-csi-driver = {}
-
     aws-efs-csi-driver = {}
   }
 

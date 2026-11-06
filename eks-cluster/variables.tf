@@ -25,5 +25,5 @@ variable "eks_nodegroup_blue_version" {
 }
 
 variable "eks_nodegroup_green_version" {
-    default = "1.32"
+    default = "1.33"
 }
